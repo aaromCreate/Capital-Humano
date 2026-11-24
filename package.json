@@ -1,0 +1,24 @@
+{
+  "name": "proyectofinal-dsvii-capitalhumano-main",
+  "version": "1.0.0",
+  "description": "Sistema académico de gestión de Capital Humano desarrollado en PHP nativo con arquitectura MVC. Permite administrar colaboradores, perfiles laborales, promociones, bajas, usuarios, roles, permisos, vacaciones, historial académico y reportes, cumpliendo con requisitos de seguridad OWASP, principios DRY/SOLID y firmas digitales OpenSSL para garantizar la integridad de datos sensibles como salarios.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:login": "playwright test tests/login.spec.js",
+    "test:colaboradores": "playwright test tests/colaboradores.spec.js",
+    "test:vacaciones": "playwright test tests/vacaciones.spec.js",
+    "test:reportes": "playwright test tests/reportes.spec.js",
+    "test:usuarios": "playwright test tests/usuarios-roles.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1"
+  }
+}
