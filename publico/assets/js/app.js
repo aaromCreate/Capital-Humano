@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const topbar = document.querySelector('.topbar');
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+
+  if (topbar && navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = topbar.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Cerrar navegación' : 'Abrir navegación');
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        topbar.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir navegación');
+      });
+    });
+  }
+
   document.querySelectorAll('.checks').forEach((group) => {
     group.addEventListener('change', () => group.classList.add('touched'));
   });

@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { login, logout } = require('./helpers/auth');
 
-test.describe('CP-07 - Usuarios, roles y permisos', () => {
+test.describe('CP-05 - Usuarios, roles y permisos', () => {
   test.beforeEach(async ({ page }) => {
     await login(page);
   });

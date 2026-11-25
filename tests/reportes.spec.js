@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { login } = require('./helpers/auth');
 
-test.describe('CP-06 - Reportes y estadísticas', () => {
+test.describe('CP-04 - Reportes y estadísticas', () => {
   test.beforeEach(async ({ page }) => {
     await login(page);
   });

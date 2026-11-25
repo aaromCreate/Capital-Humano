@@ -1,7 +1,7 @@
 
 const { test, expect } = require('@playwright/test');
 
-test('PA-01 - Inicio de sesión exitoso', async ({ page }) => {
+test('CP-01 - Inicio de sesión exitoso', async ({ page }) => {
     await page.goto('index.php?route=login');
 
     await page.locator('#usuario').fill('admin');

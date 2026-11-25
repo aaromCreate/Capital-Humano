@@ -15,7 +15,10 @@
 <body>
 <header class="topbar">
     <a class="brand" href="<?= e(url('public.home')) ?>">Capital Humano</a>
-    <nav class="nav">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir navegación">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="main-navigation">
         <?php if (!\App\Servicios\AuthService::check()): ?>
             <a href="<?= e(url('public.home')) ?>" class="<?= ($_GET['route'] ?? 'public.home') === 'public.home' ? 'active' : '' ?>">Conoce el sistema</a>
             <a href="<?= e(url('public.home')) ?>#beneficios">Beneficios</a>
